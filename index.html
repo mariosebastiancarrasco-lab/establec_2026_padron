@@ -157,8 +157,8 @@
 </head>
 <body>
  <div id="sidebar">
-  <div class="header-panel header-logo" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
-    <img src="logoministerio2026.png" alt="Logo Ministerio de Educación Jujuy" style="height: 60px;">
+  <div class="header-panel header-logo" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+    <img src="logoministerio2026.png" alt="Logo Ministerio de Educación Jujuy" style="height: 50px;">                                             <!--PARA CAMBIAR TAMAÑO DE LOGO--> 
     <h1 style="margin: 0;">Mapa Educativo Provincial</h1>
   </div>
 
@@ -223,8 +223,8 @@
         </select>
       </div>
 
-      <button class="btn-reset" onclick="resetFilters()">Restablecer Filtros</button>
-      <p class="fuente">Fuente: Secretaría de Planeamiento Educativo<br>Ministerio de Educación de Jujuy</p>
+      <button class="btn-reset" onclick="resetFilters()" style="color: black;">Restablecer Filtros</button>   <!--CAMBIAR ESTILO BOTTON-->
+      <p class="fuente">Fuente: Secretaría de Planeamiento Estratégico Educativo<br>Ministerio de Educación de Jujuy</p>
     </div>
 
   </div>
@@ -564,7 +564,7 @@ document.getElementById(ids.q).addEventListener('input', () => {
 
 L.control.layers(baseLayers, null, { collapsed:true }).addTo(map);
 
-const legend = L.control({ position:'bottomright' });
+const legend = L.control({ position:'bottomleft' });
 legend.onAdd = () => {
   const d = L.DomUtil.create('div', 'legend');
   d.innerHTML = '<b>Nivel principal</b>' + Object.keys(COLORES)
